@@ -12,3 +12,7 @@ class ArticleService():
         self.db.add(new_article)
         self.db.commit()
         return
+    
+    def get_articles(self):
+        result = self.db.query(ArticleModel).all()
+        return result
